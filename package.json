@@ -1,9 +1,10 @@
 {
   "name": "unit-convert",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": "false",
   "author": "Thibaud Brault",
+  "description": "A collection of function to convert a number or string from a unit to another unit",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.t.s",
@@ -12,6 +13,14 @@
     "release": "pnpm run build && changeset publish",
     "lint": "tsc"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thibaudbrault/UnitConverter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thibaudbrault/UnitConverter/issues"
+  },
+  "homepage": "https://github.com/thibaudbrault/UnitConverter#readme",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
     "ts-node": "^10.9.1",
