@@ -1,0 +1,21 @@
+{
+  "name": "unit-convert",
+  "license": "MIT",
+  "version": "0.0.1",
+  "private": "false",
+  "author": "Thibaud Brault",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.t.s",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "ts-node": "^10.9.1",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6"
+  }
+}
