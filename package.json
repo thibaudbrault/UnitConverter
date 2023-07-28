@@ -1,7 +1,7 @@
 {
   "name": "unit-convert-fns",
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": "false",
   "author": "Thibaud Brault",
   "description": "A collection of function to convert a number or string from a unit to another unit",
@@ -9,9 +9,11 @@
   "module": "dist/index.mjs",
   "types": "dist/index.t.s",
   "scripts": {
-    "build": "tsup index.ts --format cjs,esm --dts",
-    "release": "pnpm run build && changeset publish",
-    "lint": "tsc"
+    "test": "vitest",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "pnpm build && pnpm test && changeset publish",
+    "lint": "tsc",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "@changesets/cli": "^2.26.2",
     "ts-node": "^10.9.1",
     "tsup": "^7.1.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vitest": "^0.33.0"
   }
 }

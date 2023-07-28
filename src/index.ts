@@ -14,7 +14,7 @@ export const feetToMeter = (unit: number | string, fixed: number = 2) => {
     inches = parseFloat(inches);
   }
   const result = feet * 0.3048 + inches * 0.0254;
-  return result.toFixed(fixed);
+  return Number(result.toFixed(fixed));
 };
 
 export const meterToFeet = (unit: number | string, fixed: number = 2) => {
