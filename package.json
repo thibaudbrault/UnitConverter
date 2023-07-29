@@ -1,7 +1,7 @@
 {
   "name": "unit-convert-fns",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": "false",
   "author": "Thibaud Brault",
   "description": "A collection of function to convert a number or string from a unit to another unit",

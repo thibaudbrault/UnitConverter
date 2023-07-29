@@ -1,5 +1,11 @@
 # unit-convert
 
+## 0.2.0
+
+### Minor Changes
+
+- 813c31e: Release documentation
+
 ## 0.1.0
 
 ### Minor Changes
