@@ -1,3 +1,14 @@
+const setup = (unit: number | string) => {
+  let formattedUnit = unit;
+  if (typeof formattedUnit === "string") {
+    formattedUnit = formattedUnit.includes(",")
+      ? formattedUnit.replace(",", ".")
+      : formattedUnit;
+    formattedUnit = parseFloat(formattedUnit);
+  }
+  return formattedUnit;
+};
+
 export const feetToMeter = (unit: number | string, fixed: number = 2) => {
   let formattedUnit = unit;
   if (typeof formattedUnit === "string" && formattedUnit.includes(",")) {
@@ -15,17 +26,6 @@ export const feetToMeter = (unit: number | string, fixed: number = 2) => {
   }
   const result = feet * 0.3048 + inches * 0.0254;
   return Number(result.toFixed(fixed));
-};
-
-const setup = (unit: number | string) => {
-  let formattedUnit = unit;
-  if (typeof formattedUnit === "string") {
-    formattedUnit = formattedUnit.includes(",")
-      ? formattedUnit.replace(",", ".")
-      : formattedUnit;
-    formattedUnit = parseFloat(formattedUnit);
-  }
-  return formattedUnit;
 };
 
 export const meterToFeet = (unit: number | string, fixed: number = 2) => {
