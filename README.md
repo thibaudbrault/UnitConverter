@@ -29,6 +29,8 @@ const meter = feetToMeter(feet, 3);
 - [meterToFeet](#meterToFeet)
 - [cmToInches](#cmToInches)
 - [inchesToCm](#inchesToCm)
+- [milesToKm](#milesToKm)
+- [kmToMiles](#kmToMiles)
 
 <hr />
 
@@ -47,8 +49,8 @@ This functions returns two variables: the <b>feet</b> and the <b>inches</b>
 
 ```typescript
 import { meterToFeet } from "unit-convert-fns";
-const meter = "1,78;
-const {feet, inches} = meterToFeet(meter);
+const meter = "1,78";
+const { feet, inches } = meterToFeet(meter);
 console.log(feet, inches);
 // feet will be equal to 5 and inches will be equal to 10.08
 ```
@@ -69,8 +71,28 @@ console.log(inches);
 
 ```typescript
 import { inchesToCm } from "unit-convert-fns";
-const inches = "8.45;
+const inches = "8.45";
 const cm = inchesToCm(inches);
 console.log(cm);
 // cm will be equal to 21.46
+```
+
+<h3 id="milesToKm"><code>milesToKm</code></h3>
+
+```typescript
+import { milesToKm } from "unit-convert-fns";
+const miles = 4.23;
+const km = milesToKm(miles);
+console.log(km);
+// km will be equal to 6.81
+```
+
+<h3 id="kmToMiles"><code>kmToMiles</code></h3>
+
+```typescript
+import { kmToMiles } from "unit-convert-fns";
+const km = 12.56;
+const miles = kmToMiles(km);
+console.log(miles);
+// miles will be equal to 7.80
 ```
