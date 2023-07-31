@@ -1,4 +1,11 @@
-import { cmToInches, feetToMeter, inchesToCm, meterToFeet } from ".";
+import {
+  cmToInches,
+  feetToMeter,
+  inchesToCm,
+  kmToMiles,
+  meterToFeet,
+  milesToKm,
+} from ".";
 import { expect, test } from "vitest";
 
 test("Convert feet to meter with a number", () => {
@@ -49,4 +56,24 @@ test("Convert inches to centimeters wih a number", () => {
 test("Convert inches to centimeters with a string with a comma", () => {
   const result = inchesToCm("8,45");
   expect(result).toEqual(21.46);
+});
+
+test("Convert miles to kilometers wih a number", () => {
+  const result = milesToKm(4.23);
+  expect(result).toEqual(6.81);
+});
+
+test("Convert miles to kilometers with a string with a comma", () => {
+  const result = milesToKm("24,75");
+  expect(result).toEqual(39.83);
+});
+
+test("Convert kilometers to miles wih a number", () => {
+  const result = kmToMiles(12.56);
+  expect(result).toEqual(7.8);
+});
+
+test("Convert kilometers to miles with a string with a comma", () => {
+  const result = kmToMiles("4,22");
+  expect(result).toEqual(2.62);
 });

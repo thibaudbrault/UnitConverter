@@ -45,3 +45,13 @@ export const inchesToCm = (unit: number | string, fixed: number = 2) => {
   const formattedUnit = setup(unit);
   return Number((formattedUnit * 2.54).toFixed(fixed));
 };
+
+export const milesToKm = (unit: number | string, fixed: number = 2) => {
+  const formattedUnit = setup(unit);
+  return Number((formattedUnit * 1.609344).toFixed(fixed));
+};
+
+export const kmToMiles = (unit: number | string, fixed: number = 2) => {
+  const formattedUnit = setup(unit);
+  return Number((formattedUnit / 1.609344).toFixed(fixed));
+};
