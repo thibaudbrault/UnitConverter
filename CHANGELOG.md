@@ -1,5 +1,11 @@
 # unit-convert
 
+## 0.3.0
+
+### Minor Changes
+
+- 5cf553d: Create milesToKm and kmToMiles functions
+
 ## 0.2.0
 
 ### Minor Changes
